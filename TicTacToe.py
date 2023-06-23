@@ -29,6 +29,7 @@ def display(board: list, clear = True):
 
 def show_menu():
     '''display the menu'''
+    cls()
     print("\nHi there, welcome to my Tic-Tac-Toe game!")
     print("1 - Start playing")
     print("2 - Exit\n")
