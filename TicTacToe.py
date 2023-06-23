@@ -1,4 +1,5 @@
 
+import os
 
 def initialize_board():
     '''init empty gameboard'''
@@ -10,15 +11,13 @@ def initialize_board():
 
 def cls():
     '''clears the screen'''
-    print ("\n" * 100)
+    os.system('cls')
 
 
 def display(board: list, clear = True):
     '''display the gameboard'''
     if clear:
         cls()
-    else: 
-        print('\n'*60)
 
     i = 0
     print('    0    1    2')
