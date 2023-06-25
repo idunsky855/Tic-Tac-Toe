@@ -9,7 +9,7 @@ def initialize_board():
     return board
 
 
-def cls():
+def clear_screen():
     '''clears the screen'''
     
     #for windows
