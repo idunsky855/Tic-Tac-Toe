@@ -25,7 +25,7 @@ def clear_screen():
 def display(board: list, clear = True):
     '''display the game board'''
     if clear:
-        cls()
+        clear_screen()
 
     i = 0
     print('    0    1    2')
@@ -36,7 +36,7 @@ def display(board: list, clear = True):
 
 def show_menu():
     '''display the menu'''
-    cls()
+    clear_screen()
     print("\nHi there, welcome to my Tic-Tac-Toe game!")
     print("1 - Start playing")
     print("2 - Exit\n")
@@ -69,7 +69,7 @@ def play():
         #check if won
         game_tup = game_ended(board)
         if game_tup[0]:
-            cls()
+            clear_screen()
             break
 
         #turn of 'o'
@@ -78,7 +78,7 @@ def play():
         #check if won
         game_tup = game_ended(board)
         if game_tup[0]:
-            cls()
+            clear_screen()
             break
     
     display(board, clear = False)
