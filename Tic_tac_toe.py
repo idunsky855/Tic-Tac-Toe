@@ -12,9 +12,14 @@ def initialize_board():
     return board
 
 
-def cls():
+def clear_screen():
     '''clears the screen'''
-    os.system('cls')
+    
+    #for windows
+   # os.system('cls')
+
+    #for linux/mac
+    os.system('clear')
 
 
 def display(board: list, clear = True):
@@ -64,6 +69,7 @@ def play():
         #check if won
         game_tup = game_ended(board)
         if game_tup[0]:
+            cls()
             break
 
         #turn of 'o'
@@ -72,13 +78,17 @@ def play():
         #check if won
         game_tup = game_ended(board)
         if game_tup[0]:
+            cls()
             break
     
     display(board, clear = False)
     if game_tup[1] == 'tie':
         print('\nGame over - Tie\n')
     else:
-        print(f'\nGame over - {game_tup[1]} won!\n')    
+        print(f'\nGame over - {game_tup[1]} won!\n')
+    
+    #display the result for 2 seconds
+    os.system('sleep 2')
         
     
 
